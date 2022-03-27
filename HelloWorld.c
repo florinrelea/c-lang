@@ -1,22 +1,39 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
-  double a;
-  double b;
-  double c;
+  const int MIN = 1;
+  const int MAX = 100;
+  int guess;
+  int guesses = 0;
+  int answer;
 
-  printf("--> Find the triangle's C <--\n");
+  // Set random seed as current time
+  srand(time(0));
 
-  printf("Enter side A: ");
-  scanf("%lf", &a);
+  // Genrate number between min and max
+  answer = (rand() % MAX) + MIN;
 
-  printf("Enter side B: ");
-  scanf("%lf", &b);
+  do {
+    printf("Enter a guess: ");
+    scanf("%d", &guess);
 
-  c = sqrt(a * a + b * b);
+    if (guess > answer) {
+      printf("Yooo, too high!?\n");
+    } else if (guess < answer) {
+      printf("Yoow, too low!?\n");
+    } else {
+      printf("Correct!\n");
+    }
 
-  printf("The result is %lf", c);
+    guesses++;
+  } while (guess != answer);
+
+  printf("********************\n");
+  printf("Answer: %d\n", answer);
+  printf("Number of guesses: %d\n", guesses);
+  printf("********************\n");
 
   return 0;
 }
