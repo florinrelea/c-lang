@@ -1,1 +1,1 @@
-cd "e:\sandbox\c-lang\" ; if ($?) { gcc HelloWorld.c -o HelloWorld } ; if ($?) { .\HelloWorld }
+cd "e:\sandbox\c-lang\" ; if ($?) { gcc TicTacToe.c -o TicTacToe } ; if ($?) { .\TicTacToe }
