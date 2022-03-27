@@ -1,1 +1,1 @@
-cd "e:\sandbox\c-lang\" ; if ($?) { gcc TicTacToe.c -o TicTacToe } ; if ($?) { .\TicTacToe }
+cd "e:\sandbox\c-lang\" ; if ($?) { gcc ArrayPointers.c -o ArrayPointers } ; if ($?) { .\ArrayPointers }
