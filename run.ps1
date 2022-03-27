@@ -1,0 +1,1 @@
+cd "e:\sandbox\c-lang\" ; if ($?) { gcc HelloWorld.c -o HelloWorld } ; if ($?) { .\HelloWorld }
